@@ -20,9 +20,9 @@ Este projeto utiliza Docker Compose para facilitar o desenvolvimento com Laravel
    
 ### Usando Make (Unix/Linux/Mac)
 
-1. **Subir os containers:**
+1. **Fazer o build ds containers:**
    ```sh
-   make up
+   make build
    ```
 
 2. **Instalar dependências do PHP:**
@@ -35,12 +35,17 @@ Este projeto utiliza Docker Compose para facilitar o desenvolvimento com Laravel
    make migrate
    ```
 
-4. **Acessar o container:(opcional)**
+4. **Subir os containers:**
+   ```sh
+   make up
+   ```
+
+5. **Acessar o container:(opcional)**
    ```sh
    make bash
    ```
 
-5. **Rodar os testes:**
+6. **Rodar os testes:**
    ```sh
    make test
    ```
@@ -53,7 +58,8 @@ Este projeto utiliza Docker Compose para facilitar o desenvolvimento com Laravel
 
 ### Usando Docker Compose diretamente (Unix/Windows)
 
-1. **Subir os containers:**
+1. **Fazer o build ds containers:
+   :**
    ```sh
    docker compose -f compose.dev.yaml up -d
    ```
@@ -68,16 +74,21 @@ Este projeto utiliza Docker Compose para facilitar o desenvolvimento com Laravel
    docker compose -f compose.dev.yaml exec workspace php artisan migrate
    ```
 
-4. **Acessar o container:**
+4. **Subir os containers:**
+   ```sh
+   docker compose -f compose.dev.yaml up -d
+   ```
+
+5. **Acessar o container:**
    ```sh
    docker compose -f compose.dev.yaml exec workspace bash
    ```
 
-5. **Rodar os testes:**
+6. **Rodar os testes:**
    ```sh
    docker compose -f compose.dev.yaml exec workspace php artisan test
    ```
-6. **Outros comandos úteis:**
+7. **Outros comandos úteis:**
     - `docker compose -f compose.dev.yaml exec workspace php artisan <comando>`
     - `docker compose -f compose.dev.yaml exec workspace npm run dev`
     - `docker compose -f compose.dev.yaml logs -f`
