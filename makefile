@@ -27,6 +27,9 @@ artisan:
 
 migrate:
 	$(EXEC) php artisan migrate
+    $(EXEC) php artisan config:clear
+	$(EXEC) php artisan cache:clear
+	$(EXEC) php artisan config:cache
 
 migrate-fresh:
 	$(EXEC) php artisan migrate:fresh
