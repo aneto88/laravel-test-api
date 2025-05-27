@@ -13,6 +13,11 @@ Este projeto utiliza Docker Compose para facilitar o desenvolvimento com Laravel
 
 ## Como rodar o projeto
 
+1. **Gerar o env:**
+   ```sh
+   cp .env-example .env
+   ```
+   
 ### Usando Make (Unix/Linux/Mac)
 
 1. **Subir os containers:**
@@ -30,7 +35,7 @@ Este projeto utiliza Docker Compose para facilitar o desenvolvimento com Laravel
    make migrate
    ```
 
-4. **Acessar o container:**
+4. **Acessar o container:(opcional)**
    ```sh
    make bash
    ```
@@ -40,9 +45,8 @@ Este projeto utiliza Docker Compose para facilitar o desenvolvimento com Laravel
    make test
    ```
 
-6**Outros comandos úteis:**
+6. **Outros comandos úteis:**
     - `make artisan` — Executa comandos do Artisan (exemplo: `make artisan migrate`)
-    - `make test` — Roda os testes
     - `make logs` — Mostra os logs dos containers
 
 ---
